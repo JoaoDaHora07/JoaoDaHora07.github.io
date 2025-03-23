@@ -50,28 +50,14 @@ header{
     background-color: black;
 }
 
-#btnClose{
-    padding: 8px;
-    background-color: rgb(170, 70, 70);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
 
-#btnClose:active{
-    padding: 8px;
-    background-color: rgb(194, 64, 64);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
 
 .menu{
     position: fixed;
     top: 0;
     width: var(--menu-size);
     height: 100%;
-    background-color: #ac8f67;
+    background-color: #ab8753;
 }
 
 .menu,ul{
@@ -102,6 +88,17 @@ header{
 .effect{
     transition: margin .4s;
 
+}
+
+.userImage{
+    border-radius: 50%;
+}
+
+.textContent{
+    color: white;
+   font-size: 25px; 
+   font-weight: bold;
+   ;
 }
 
 
