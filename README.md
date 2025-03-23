@@ -1,1 +1,1 @@
-# JoaoDaHora07.github.io
+Repositório para atividades de desenvolvimento web.
