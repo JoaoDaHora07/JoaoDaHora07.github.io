@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(100, 105, 110);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 0 0 5px yellow;
+}
+
+
+
+
+
+section{
+    height: 400px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px; 
+    grid-template-rows: 50px 50px;
+    justify-content: center;
+    gap: 0px;
+    row-gap: 200px;
+    margin-top: 100px;
+    margin-left: 120px;
+}
+
+section a img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+#game div{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 5px 10px black;
+    overflow: hidden;
+
+
+}
+
