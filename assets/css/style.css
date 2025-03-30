@@ -22,15 +22,28 @@
 
 
 body{
-    background-color: #410707;
+    background-color: rgb(22, 21, 21);
     background-size: cover;  
 }
 
 
 header{
-    background-color: #ab8753;
+    background-color: #727272;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+}
+header p{
+    position: absolute;
+    top: 18px;
+    left: 55px;
+    font-size: 20px;
+    color: white;
+}
+
+header img{
+    position: absolute;
+    left: 20px;
+    top: 15px;
 }
 
 #btnMenu{
@@ -52,7 +65,7 @@ header{
 
 #btnClose{
     padding: 8px;
-    background-color: rgb(90, 13, 13);
+    background-color: rgb(119, 0, 0);
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -72,7 +85,7 @@ header{
     top: 0;
     width: var(--menu-size);
     height: 100%;
-    background-color: #ab8753;
+    background-color: #505050;
     margin-left: -250px;
 }
 
@@ -107,15 +120,10 @@ header{
     color: white;
 }
 
-
-
-
-
 .textContent{
     color: white;
    font-size: 25px; 
    font-weight: bold;
-   ;
 }
 
 .video-container{
