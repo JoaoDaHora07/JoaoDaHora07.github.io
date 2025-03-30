@@ -30,7 +30,7 @@ body{
 header{
     background-color: #ab8753;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 #btnMenu{
@@ -50,26 +50,42 @@ header{
     background-color: black;
 }
 
+#btnClose{
+    padding: 8px;
+    background-color: rgb(90, 13, 13);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btnClose:active{
+    
+    background-color: rgb(48, 7, 7);
+}
 
 
-.menu{
+
+
+
+#menu{
     position: fixed;
     top: 0;
     width: var(--menu-size);
     height: 100%;
     background-color: #ab8753;
+    margin-left: -250px;
 }
 
-.menu,ul{
+#menu,ul{
     list-style: none;
 
 }
 
-.menu,ul,li{
+#menu,ul,li{
     display: block;
 }
 
-.menu,ul,li,a{
+#menu,ul,li,a{
     transition: color .3s;
     display: block;
     color: white;
@@ -83,20 +99,17 @@ header{
     
 }
 
-.menu,ul,li, a:hover{
+#menu,ul,li, a:hover{
     color: rgb(53, 51, 51);
 }
 
-.effect{
-    transition: margin .4s;
-
+.titleStyle{
+    color: white;
 }
 
-.userImage{
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-}
+
+
+
 
 .textContent{
     color: white;
@@ -104,6 +117,55 @@ header{
    font-weight: bold;
    ;
 }
+
+.video-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.video-container video{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+
+}
+
+.video-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    
+    display: flex;
+    width: 1000px; 
+    margin: 50px auto; 
+    overflow: hidden; 
+  }
+
+  .text-container{
+    flex: 1;
+    padding: 50px;
+  }
+
+  .text-container p{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+
 
 
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Desenvolvimento WEB</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="btnMenu" onclick="showMenu()">
+        <p>Atividades</p>
+        <span id="homeButton" class="material-icons" style="color: white;" onclick="home()">home</span>
+        Desenvolvimento WEB
+    </header>
+
+    
+
+    <div class="content">
+        <iframe id="view" src="">
+
+        </iframe>
+    
+    </div>
+
+
+    <div id="menu" style="transition: margin .4s;">
+        
+        <nav>
+           
+            <div style="text-align: right;">
+                <button id="btnClose" onclick="hideMenu()">X</button>
+            </div>
+            <ul>
+                <a href="../atv001/index.html" target="_blank">
+                    <strong>atividade 001</strong>
+                </a>
+                <button id="atvButtons" onclick="updateView('https://joaodahora07.github.io/atv001/index.html')">
+                    Visualizar
+                </button>
+                <a href="../atv002/index.html" target="_blank"> 
+                    <strong>atividade 002</strong>
+                </a>
+                <button id="atvButtons" onclick="updateView('https://joaodahora07.github.io/atv002/index.html')">
+                    Visualizar
+                </button>
+                <a href="../atv003/index.html" target="_blank"> 
+                    <strong>atividade 003</strong>
+                </a>
+                <button id="atvButtons" onclick="updateView('https://joaodahora07.github.io/atv003/index.html')">
+                    Visualizar
+                </button>
+
+            </ul>
+        </nav>
+    </div>
+</body>
+
+<script src="assets/js/script.js"></script>
+</html>
