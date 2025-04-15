@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        'menu content'
+        'menu content'
+        'menu content';
+    background-color: white;
+    background-size: cover;
+}
+
+#menu{
+    grid-area: menu;
+    background-color: rgb(115, 115, 192);
+}
+
+#content{
+    grid-area: content;
+}
+
+#box-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box-menu > div{
+    margin-top: 35px;
+}
+
+#box-menu p{
+    margin-top: 50px;
+}
+
+.box-color{
+    height: 100px;
+    width: 150px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box-color-item{
+    height: 45px;
+    width: 45px;
+    margin-right: 5px;
+}
+
+.box-format{
+    display: flex;
+    height: 45px;
+    width: 100px;
+}
+
+.box-format-item{
+    height: 45px;
+    width: 45px;
+    background-color: plum;
+    margin-right: 5px;
+}
+
+#size-input{
+    border-style: solid;
+    width: 150px;
+    height: 25px;
+}
+
+#content{
+    display: flex;
+
+}
+
+.select{
+    height: 30px; 
+    width: 150px; 
+    margin-top: 10px;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    font-size: 50px;
+    margin: 3px;
+    border-style: solid;
+    
+}
