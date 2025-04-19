@@ -70,6 +70,9 @@ body {
 
 #content {
   display: flex;
+  transition: all 0.5s ease;
+  gap: 10px;
+  min-height: 200px;
 }
 
 .select {
@@ -78,14 +81,24 @@ body {
   margin-top: 10px;
 }
 
-#box {
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100px;
+  min-width: 100px;
+  max-height: 350px;
+  max-width: 350px;
   height: 100px;
   width: 100px;
   background-color: orange;
   font-size: 50px;
   margin: 3px;
   border-style: solid;
+  transition: all 0.2s;
+}
+
+.selected {
+  outline: 3px solid rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */

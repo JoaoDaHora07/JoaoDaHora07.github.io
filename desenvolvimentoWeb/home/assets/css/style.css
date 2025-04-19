@@ -144,3 +144,18 @@ iframe{
     padding: 0;
 }
 
+.visualizer{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.visualizer:hover{
+    transition: all 0.3s;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(53, 51, 51);
+}
+
