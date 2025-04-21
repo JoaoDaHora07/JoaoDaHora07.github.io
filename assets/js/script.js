@@ -1,12 +1,20 @@
+function showMainContent() {
+    event.preventDefault(); 
 
+    
+    document.getElementById('text-container').style.display = 'block';
+    document.getElementById('social-media-container').style.display = 'flex';
 
-
-
-
-function showMenu() {
-    document.querySelector('#menu').style.marginLeft = 0 ;
+    document.getElementById('dwList').style.display = 'none';
 }
 
-function hideMenu() {
-    document.querySelector('#menu').style.marginLeft = '-250px';
+function hideDw() {
+    event.preventDefault(); 
+
+    
+    document.getElementById('text-container').style.display = 'none';
+    document.getElementById('social-media-container').style.display = 'none';
+
+    document.getElementById('dwList').style.display = 'block';
 }
+

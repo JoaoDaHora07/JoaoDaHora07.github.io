@@ -1,97 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preload" href="assets/css/style.css" as="style">
-    <link rel="preload" href="assets/js/script.js" as="script">
-
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="shortcut icon" href="assets/images/spike.jpeg" type="image/x-icon">
-    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <title>João da Hora</title>
 </head>
 <body>
-
     <header>
-        <img src="assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="btnMenu" onclick="showMenu()">
-        <p class=>Disciplinas</p>
-        <h1 class="titleStyle">BIG</h1>
+        <h1>João da Hora</h1>
+        <a href="" onclick="showMainContent()">About me</a>
+        <a href="">Projects</a>
+        <a href="" onclick="hideDw()">Desenvolvimento Web</a>
+
+
+        <img src="assets/images/download (5).jpeg" alt="">
+
     </header>
+
     <div id="content">
-        <div class="row">
+        <div id="text-container">
+            <p>
+                My name is João Marcelo da Hora Camara, I’m 18 years old, and I currently study at the Federal Institute of Paraná (IFPR). I’m enrolled in the Integrated High School program with a technical course in Informatics, which allows me to study both general education subjects and gain technical knowledge in the field of technology.
+            </p>
+            <p>
+                I’m interested in everything related to computing, from programming to networks and system development. Studying at IFPR has been a great experience because, in addition to solid academic training, I also have the opportunity to take part in projects, events, and activities that help me grow both personally and professionally.
+            </p>
+        
+            <p>
+                I plan to continue in the tech field and pursue further studies after completing my course, always looking to learn more and prepare for the challenges of the job market.
+            </p>
+        </div>
 
-            <div class="column">
-                <div class="text-container">
-                    <p class="textContent">
-                        Olá, Meu nome é João Marcelo da Hora Camara, tenho 17 anos e atualmente estou fazendo curso técnico de informática no IFPR Campus Paranaguá.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="column">
-                <div class="video-container">
-                    <video autoplay loop muted>
-                        <source src="assets/videos/WhatsApp Video 2025-03-30 at 14.13.04.mp4">
-                    </video>
-                </div>
+        <div id="social-media-container">
+            <p>Instagram: <a href="https://www.instagram.com/sheluvsjao" target="_blank">sheluvsjao</a></p>
+            <p>GitHub: <a href="https://github.com/JoaoDaHora07" target="_blank">JoaoDaHora07</a></p>
+            <p>Letterboxd: <a href="https://letterboxd.com/bigcorleone" target="_blank">bigcorleone</a></p>
+
+        </div>
+
+        <div id="dwList">
+            <h1>DESENVOLVIMENTO WEB</h1>
+            <h2>Atividades</h2>
+            <div class="list-container">
+                <a href="desenvolvimentoWeb/atv001/index.html" target="_blank">HTML: Tags e Formulário</a>
+                <a href="desenvolvimentoWeb/atv002/index.html" target="_blank">CSS: Seletores</a>
+                <a href="desenvolvimentoWeb/atv003/index.html" target="_blank">CSS: Display</a>
+                <a href="desenvolvimentoWeb/atv005/index.html" target="_blank">CSS: Site Responsivo</a>
+                <a href="desenvolvimentoWeb/atv004/index.html" target="_blank">Flexbox e SASS</a>
             </div>
         </div>
 
-        <div class="row">
 
-            <div class="column">
-                <div class="video-container">
-                    <img src="assets/images/Screenshot_10.png" alt="">
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="text-container">
-                    <h1 class="textContent">
-                        MINHAS REDES SOCIAIS:
-                    </h1>
-                    <br>
-                    <a href="https://www.instagram.com/sheluvsjao/" type="_blank">
-                    <p><img src="assets/images/icons8-instagram.svg" alt="" style="height: 25px; width: 25px;">sheluvsjao</p>
-                    </a>
-                    <a href="https://github.com/JoaoDaHora07" type="_blank">
-                        <p><img src="assets/images/icons8-github.svg" alt="" style="height: 25px; width: 25px;">joaodahora07</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-       
-
-        
-
-    </div>
-    <div id="menu" style="transition: margin .4s;">
-        
-        <nav>
-           
-            <div style="text-align: right;">
-                <button id="btnClose" onclick="hideMenu()">X</button>
-            </div>
-            <h1 style="color: white;">Disciplinas</h1>
-            <ul>
-                <a href="desenvolvimentoWeb/home/index.html">
-                    <span class="material-icons">computer</span> <strong>Desenvolvimento WEB</strong>
-                </a>
-                <a href="atv002/index.html" target="_blank"> 
-                    <span class="material-icons">workspaces</span> <strong>Engenharia de Software</strong>
-                </a>
-                <a href="atv003/index.html" target="_blank"> 
-                    <span class="material-icons">lan</span> <strong>introdução a Redes</strong>
-                </a>
-
-            </ul>
-        </nav>
     </div>
 </body>
-
 
 <script src="assets/js/script.js"></script>
 </html>

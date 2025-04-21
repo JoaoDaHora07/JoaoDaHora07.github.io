@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Iceberg";
+    
+}
+
+body{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-areas:
+        'menu content'
+        'menu content'
+        'menu content';
+   background-color: black;
+}
+
+header{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    height: 600px;
+    margin: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    
+}
+
+header h1{
+    font-size: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header a{
+    font-size: 20px;
+    margin: 5px;
+    transition: all .5s;
+    
+}
+
+header a:hover{
+    color: rgb(49, 49, 49);
+    font-size: 23px;
+}
+
+header img{
+    position: fixed;
+    height: 400px;
+    width: 240px;
+    bottom: -20px;
+    left: 80px;
+}
+
+#content{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+}
+
+#text-container{
+    display: block;
+    margin-top: 70px;
+    height: 100%;
+}
+
+#text-container p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#social-media-container{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+#social-media-container a{
+    transition: all .3s;
+}
+
+#social-media-container a:hover{
+    color:rgb(49, 49, 49);
+}
+
+#dwList{
+    transition: all .9;
+    display: none;
+}
+
+#dwList h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+#dwList h2{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.list-container{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    
+
+
+}
+
+.list-container a{
+    transition: all .3s;
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+.list-container a:hover{
+    font-size: 30px;
+    color:rgb(49, 49, 49);
+
+}
+
+
+

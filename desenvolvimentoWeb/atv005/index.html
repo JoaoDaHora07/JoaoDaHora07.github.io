@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/script.js" as="script">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="assets/images/spike.jpeg" type="image/x-icon">
+    <title>Home</title>
+</head>
+<body>
+
+    <header>
+        <img src="assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="btnMenu" onclick="showMenu()">
+        <p class=>Disciplinas</p>
+        <h1 class="titleStyle">BIG</h1>
+    </header>
+    <div id="content">
+        <div class="row">
+
+            <div class="column">
+                <div class="text-container">
+                    <p class="textContent">
+                        Olá, Meu nome é João Marcelo da Hora Camara, tenho 17 anos e atualmente estou fazendo curso técnico de informática no IFPR Campus Paranaguá.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="video-container">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/WhatsApp Video 2025-03-30 at 14.13.04.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+                <div class="video-container">
+                    <img src="assets/images/Screenshot_10.png" alt="">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="text-container">
+                    <h1 class="textContent">
+                        MINHAS REDES SOCIAIS:
+                    </h1>
+                    <br>
+                    <a href="https://www.instagram.com/sheluvsjao/" type="_blank">
+                    <p><img src="assets/images/icons8-instagram.svg" alt="" style="height: 25px; width: 25px;">sheluvsjao</p>
+                    </a>
+                    <a href="https://github.com/JoaoDaHora07" type="_blank">
+                        <p><img src="assets/images/icons8-github.svg" alt="" style="height: 25px; width: 25px;">joaodahora07</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+       
+
+        
+
+    </div>
+    <div id="menu" style="transition: margin .4s;">
+        
+        <nav>
+           
+            <div style="text-align: right;">
+                <button id="btnClose" onclick="hideMenu()">X</button>
+            </div>
+            <h1 style="color: white;">Disciplinas</h1>
+            <ul>
+                <a href="desenvolvimentoWeb/home/index.html">
+                    <span class="material-icons">computer</span> <strong>Desenvolvimento WEB</strong>
+                </a>
+                <a href="atv002/index.html" target="_blank"> 
+                    <span class="material-icons">workspaces</span> <strong>Engenharia de Software</strong>
+                </a>
+                <a href="atv003/index.html" target="_blank"> 
+                    <span class="material-icons">lan</span> <strong>introdução a Redes</strong>
+                </a>
+
+            </ul>
+        </nav>
+    </div>
+</body>
+
+
+<script src="assets/js/script.js"></script>
+</html>
