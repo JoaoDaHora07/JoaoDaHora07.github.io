@@ -44,6 +44,11 @@ body {
     color: white;
 }
 
+.box-stats-item span{
+    margin-left: 40%;
+    color: white;
+}
+
 .box-stats-item{
     display: flex;
     align-items: center;
@@ -63,11 +68,37 @@ body {
 }
 
 #naveAmiga{
-    width: auto;
-    height: auto;
+    position: relative;
+    left: 0;
 }
 
 #naveAmiga img{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+}
+
+
+#paused{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 70%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#paused p{
+    color: white;
+    font-size: 80px;
+    opacity: 100%;
+}
+
+.shot {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-image: url(../images/missil.png);
+    background-size: cover;
 }
