@@ -136,7 +136,7 @@ function moveShots() {
             }
         } else {
             top += velocidadeTiro;
-            if (top > window.innerHeight - 33) {
+            if (top > window.innerHeight - 35) {
                 el.remove();
                 shots.splice(i, 1);
                 continue;
