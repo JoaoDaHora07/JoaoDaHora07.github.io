@@ -10,7 +10,8 @@ const intervalo = 30;
 const shots = [];
 let life = 3;
 let score = 0;
-
+let velocidadeQueda = 5;
+let intervaloInimigos; 
 
 window.onload = function () {
     contar();
@@ -99,6 +100,7 @@ document.addEventListener('keydown', function (event) {
 
 document.addEventListener('keydown', function (event) {
     if (event.key == ' ') {
+        
         shot();
     }
 });
@@ -130,11 +132,11 @@ function shot() {
 
 }
 
-
-
 function moveShots() {
-
     if (pausando) return;
+
+    const inimigas = document.querySelectorAll("#naveInimiga");
+
     for (let i = shots.length - 1; i >= 0; i--) {
         const shot = shots[i];
         const el = shot.element;
@@ -142,15 +144,47 @@ function moveShots() {
 
         if (shot.direcao === 'subindo') {
             top -= velocidadeTiro;
+            el.style.top = `${top}px`;
+
             if (top < -20) {
                 el.remove();
                 shots.splice(i, 1);
+                continue;
             }
 
-            el.style.top = `${top}px`;
+            const shotRect = el.getBoundingClientRect();
+
+            // Verifica colisão com todas as inimigas
+            for (let j = 0; j < inimigas.length; j++) {
+                const inimiga = inimigas[j];
+
+                if (inimiga.style.display === "none") continue;
+
+                const inimigaRect = inimiga.getBoundingClientRect();
+
+                if (
+                    shotRect.bottom >= inimigaRect.top &&
+                    shotRect.top <= inimigaRect.bottom &&
+                    shotRect.left <= inimigaRect.right &&
+                    shotRect.right >= inimigaRect.left
+                ) {
+                    
+                    el.remove();
+                    shots.splice(i, 1);
+                    
+                    inimiga.style.visibility = "hidden";
+            
+                    score += 1;
+                    document.getElementById("score").textContent = "ALIEN: " + score;
+                    changeScreen(score);
+    
+                    break;
+                }
+            }
         }
     }
 }
+
 
 setInterval(moveShots, intervalo);
 
@@ -159,40 +193,74 @@ function moverNaveInimiga() {
     const inimiga = document.getElementById("containerEnemies");
     const amiga = document.getElementById("naveAmiga");
 
-    intervaloInimigo = setInterval(() => {
+    intervaloInimigos = setInterval(() => {
         if (pausando) return; 
 
         const inimigaTop = parseInt(getComputedStyle(inimiga).top || 0);
-        inimiga.style.top = (inimigaTop + 5) + "px";
+        inimiga.style.top = (inimigaTop + velocidadeQueda) + "px";
 
         const inimigaRect = inimiga.getBoundingClientRect();
         const amigaRect = amiga.getBoundingClientRect();
 
-        if (
-            inimigaRect.bottom >= amigaRect.top &&
+        if (inimigaRect.bottom >= amigaRect.top &&
             inimigaRect.left < amigaRect.right &&
-            inimigaRect.right > amigaRect.left
-        ) {
-            clearInterval(intervaloInimigo);
-            life = life - 1;
+            inimigaRect.right > amigaRect.left) {
 
+            clearInterval(intervaloInimigos);
+            life--;
             if (life == 0) {
-                console.log("Game Over");
                 document.getElementById("paused").style.display = "flex";
                 document.getElementById("paused").innerHTML = "<p>GAME OVER</p>";
-
-                clearInterval(intervaloInimigo);
-                clearInterval(id); // para o relógio
-                pausando = true;
-
-                setTimeout(() => {
-                    location.reload();
-                }, 3000);
+                setTimeout(() => location.reload(), 3000);
             } else {
-                document.querySelector("#life").textContent = "LIFE:" + life;
+                document.querySelector("#life").textContent = "LIFE: " + life;
                 inimiga.style.top = 0;
                 moverNaveInimiga();
             }
         }
     }, 30);
+}
+
+
+
+function changeScreen(score) {
+    const body = document.body;
+
+    if (score === 3) {
+        body.className = "level2";
+        velocidadeQueda += 2;
+        life = 3;
+        document.querySelector("#life").textContent = "LIFE: " + life;
+        reiniciarInimigos();
+    } else if (score === 6) {
+        body.className = "level3";
+        velocidadeQueda += 2;
+        life = 3;
+        document.querySelector("#life").textContent = "LIFE: " + life;
+        reiniciarInimigos();
+    } else if (score === 9) {
+        body.className = "level4";
+        velocidadeQueda += 2;
+        life = 3;
+        document.querySelector("#life").textContent = "LIFE: " + life;
+        reiniciarInimigos();
+    }else if (score === 12){
+        clearInterval(intervaloInimigos);
+        document.getElementById("paused").style.display = "flex";
+        document.getElementById("paused").innerHTML = "<p>YOU WIN</p>";
+    }
+}
+
+function reiniciarInimigos() {
+    const inimigas = document.querySelectorAll("#naveInimiga");
+    const container = document.getElementById("containerEnemies");
+
+    clearInterval(intervaloInimigos);
+
+    container.style.top = "0"; // Fora do forEach
+    inimigas.forEach(inimiga => {
+        inimiga.style.visibility = "visible";
+    });
+
+    moverNaveInimiga();
 }

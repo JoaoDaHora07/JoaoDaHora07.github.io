@@ -12,9 +12,22 @@ body {
         'box content content'
         'box content content'
         'box content content';
-    background-image: url(../images/background.png);
     background-size: cover;
 }
+
+body.level1 {
+    background-image: url('../images/background.png');
+}
+body.level2 {
+    background-image: url('../images/background2.jpg');
+}
+body.level3 {
+    background-image: url('../images/background3.jpg');
+}
+body.level4 {
+    background-image: url('../images/background4.jpg');
+}
+
 
 #box-stats {
     grid-area: box;
