@@ -10,7 +10,7 @@
     <title>Space Cowboys</title>
 </head>
 
-<body onload="contar()">
+<body>
     <div id="box-stats">
         <div class="box-stats-item">
             <img src="assets/images/clock.png" alt="Relogio">
@@ -25,8 +25,9 @@
 
         <div class="box-stats-item">
             <img src="assets/images/nave.png" alt="Nave Espacial Amiga">
-            <span>
-                LIFE:0
+            
+            <span id="life">
+                LIFE:3
             </span>
         </div>
         <div class="box-stats-item">
@@ -41,12 +42,27 @@
         <div id="naveAmiga">
             <img src="assets/images/nave.png" alt="">
         </div>
+
+        <div id="containerEnemies">
+
+            <div id="naveInimiga">
+                <img src="assets/images/alien.png" alt="">
+            </div>
+
+            <div id="naveInimiga">
+                <img src="assets/images/alien.png" alt="">
+            </div>
+
+            <div id="naveInimiga">
+                <img src="assets/images/alien.png" alt="">
+            </div>
+
+        </div>
     </div>
 
     <div id="paused">
         <p>GAME PAUSED</p>
     </div>
-
 
 
     <script src="assets/js/script.js"></script>

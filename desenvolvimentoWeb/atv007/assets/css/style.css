@@ -102,3 +102,22 @@ body {
     background-image: url(../images/missil.png);
     background-size: cover;
 }
+
+#containerEnemies{
+    position: absolute;
+    top: 5px;
+    display: flex;
+    gap: 200px;
+
+}
+
+#naveInimiga{
+    height: auto;
+    width: auto;
+    
+}
+
+#naveInimiga img{
+    height: 100px;
+    width: 100px;
+}
