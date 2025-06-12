@@ -8,7 +8,7 @@ function showMainContent() {
     document.getElementById('dwList').style.display = 'none';
 }
 
-function hideDw() {
+function showDw() {
     event.preventDefault(); 
 
     
