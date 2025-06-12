@@ -11,7 +11,9 @@ def start_server(host:str, port:int):
     data = client_socket.recv(1024)
     message = data.decode('utf-8')
 
-    print(message) 
+    print(message)
+
+    client_socket.close()
 
 
 
